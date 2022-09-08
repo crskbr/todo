@@ -18,11 +18,15 @@ struct CardBackView: View {
     
     var body: some View {
         Form {
-            Group {
+            Section {
                 TextField("Task", text: $item.wrappedItem)
+                    .disabled(item.completed)
+                    .onChange(of: item.wrappedItem) { newValue in
+                        try? viewContext.save()
+                    }
             }
             
-            Group {
+            Section {
                 if isToday {
                     Button(action: completeTask) {
                         Text("Complete")
@@ -33,13 +37,12 @@ struct CardBackView: View {
                     }
                 }
             }
-        }.onDisappear {
-            try? viewContext.save()
         }
     }
     
     func completeTask() {
         item.completed.toggle()
+        try? viewContext.save()
     }
     
     func migrateTask() {

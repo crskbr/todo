@@ -20,28 +20,45 @@ struct ContentView: View {
     
     @State var day: DateInRegion = DateHelper.now()
     @State var dayIsToday: Bool = true
-    @State var newItem = ""
-
+    
+    @State var showAddItem: Bool = false
+    
+    @State var editItem: TodoEntity?
+    
     var body: some View {
         NavigationStack {
             List {
                 ForEach(items) { item in
-                    NavigationLink(value: item) {
-                        TodoRowEntryView(item: item, isToday: dayIsToday)
-                    }.swipeActions(edge: .trailing) {
-                        if dayIsToday {
-                            Button(item.completed ? "Un-Complete" : "Complete") {
-                                item.completed.toggle()
-                            }.tint(item.completed ? .red : .green)
-                        } else {
-                            if !item.migrated {
-                                Button("Migrate") {
-                                    moveToToday(item)
+                    TodoRowEntryView(item: item, isToday: dayIsToday)
+                        .swipeActions(edge: .trailing) {
+                            if dayIsToday {
+                                
+                                Button(item.completed ? "Un-Complete" : "Complete") {
+                                    item.completed.toggle()
+                                }.tint(item.completed ? .red : .green)
+                            } else {
+                                if !item.completed && !item.migrated {
+                                    Button("Migrate") {
+                                        moveToToday(item)
+                                    }
                                 }
                             }
                         }
-                    }
+                        .onTapGesture(count: 2) {
+                            item.completed.toggle()
+                        }
+                        .onLongPressGesture {
+                            if dayIsToday && !item.completed {
+                                editItem = item
+                            }
+                        }
                 }
+            }
+            .popover(isPresented: $showAddItem) {
+                AddItemView()
+            }
+            .popover(item: $editItem) { detail in
+                CardBackView(item: detail, isToday: dayIsToday)
             }
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
@@ -63,9 +80,6 @@ struct ContentView: View {
                 }
             }
             .listStyle(.insetGrouped)
-            .navigationDestination(for: TodoEntity.self) { item in
-                CardBackView(item: item, isToday: dayIsToday)
-            }
             .navigationTitle(day.toFormat("dd MMM yyyy"))
         }
     }
@@ -97,11 +111,7 @@ struct ContentView: View {
     }
     
     func addItem() {
-        let entity = TodoEntity(context: viewContext)
-        entity.day = DateHelper.now().date
-        entity.item = "New Entry"
-        
-        try? viewContext.save()
+        showAddItem.toggle()
     }
 }
 

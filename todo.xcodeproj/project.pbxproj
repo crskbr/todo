@@ -18,6 +18,7 @@
 		8331B36E28C88E1200627214 /* TodoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B36D28C88E1200627214 /* TodoEntity.swift */; };
 		8331B37128C918C200627214 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B37028C918C200627214 /* DateHelper.swift */; };
 		8331B37328C9237000627214 /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B37228C9237000627214 /* CardBackView.swift */; };
+		83BC8F2328CA77D9005101C2 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BC8F2228CA77D9005101C2 /* AddItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		8331B36D28C88E1200627214 /* TodoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEntity.swift; sourceTree = "<group>"; };
 		8331B37028C918C200627214 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		8331B37228C9237000627214 /* CardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackView.swift; sourceTree = "<group>"; };
+		83BC8F2228CA77D9005101C2 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				8331B35828C83D5700627214 /* ContentView.swift */,
 				8331B36A28C87FA200627214 /* TodoRowEntryView.swift */,
 				8331B37228C9237000627214 /* CardBackView.swift */,
+				83BC8F2228CA77D9005101C2 /* AddItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8331B36E28C88E1200627214 /* TodoEntity.swift in Sources */,
+				83BC8F2328CA77D9005101C2 /* AddItemView.swift in Sources */,
 				8331B35228C83D5700627214 /* todoApp.swift in Sources */,
 				8331B35428C83D5700627214 /* PersistenceController.swift in Sources */,
 				8331B37328C9237000627214 /* CardBackView.swift in Sources */,
@@ -329,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"todo/Preview Content\"";
+				DEVELOPMENT_TEAM = XLMQR95K98;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -342,7 +347,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.crskbr.todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,6 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"todo/Preview Content\"";
+				DEVELOPMENT_TEAM = XLMQR95K98;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -376,7 +382,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.crskbr.todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
