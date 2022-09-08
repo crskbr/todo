@@ -8,22 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		8331B35228C83D5700627214 /* todoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B35128C83D5700627214 /* todoApp.swift */; };
-		8331B35428C83D5700627214 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B35328C83D5700627214 /* Persistence.swift */; };
+		8331B35428C83D5700627214 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B35328C83D5700627214 /* PersistenceController.swift */; };
 		8331B35728C83D5700627214 /* todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8331B35528C83D5700627214 /* todo.xcdatamodeld */; };
 		8331B35928C83D5700627214 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B35828C83D5700627214 /* ContentView.swift */; };
 		8331B35B28C83D5800627214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8331B35A28C83D5800627214 /* Assets.xcassets */; };
 		8331B35F28C83D5800627214 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8331B35E28C83D5800627214 /* Preview Assets.xcassets */; };
+		8331B36928C83F3100627214 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 8331B36828C83F3100627214 /* SwiftDate */; };
+		8331B36B28C87FA200627214 /* TodoRowEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B36A28C87FA200627214 /* TodoRowEntryView.swift */; };
+		8331B36E28C88E1200627214 /* TodoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B36D28C88E1200627214 /* TodoEntity.swift */; };
+		8331B37128C918C200627214 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B37028C918C200627214 /* DateHelper.swift */; };
+		8331B37328C9237000627214 /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331B37228C9237000627214 /* CardBackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8331B34E28C83D5700627214 /* todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8331B35128C83D5700627214 /* todoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoApp.swift; sourceTree = "<group>"; };
-		8331B35328C83D5700627214 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		8331B35328C83D5700627214 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		8331B35628C83D5700627214 /* todo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = todo.xcdatamodel; sourceTree = "<group>"; };
 		8331B35828C83D5700627214 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8331B35A28C83D5800627214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8331B35C28C83D5800627214 /* todo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = todo.entitlements; sourceTree = "<group>"; };
 		8331B35E28C83D5800627214 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8331B36A28C87FA200627214 /* TodoRowEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowEntryView.swift; sourceTree = "<group>"; };
+		8331B36D28C88E1200627214 /* TodoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEntity.swift; sourceTree = "<group>"; };
+		8331B37028C918C200627214 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		8331B37228C9237000627214 /* CardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8331B36928C83F3100627214 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +66,11 @@
 		8331B35028C83D5700627214 /* todo */ = {
 			isa = PBXGroup;
 			children = (
+				8331B36F28C9186A00627214 /* Utils */,
+				8331B36C28C88E0300627214 /* Entity */,
+				8331B36628C83D9400627214 /* Controller */,
+				8331B36528C83D8D00627214 /* Views */,
 				8331B35128C83D5700627214 /* todoApp.swift */,
-				8331B35328C83D5700627214 /* Persistence.swift */,
-				8331B35828C83D5700627214 /* ContentView.swift */,
 				8331B35A28C83D5800627214 /* Assets.xcassets */,
 				8331B35C28C83D5800627214 /* todo.entitlements */,
 				8331B35528C83D5700627214 /* todo.xcdatamodeld */,
@@ -73,6 +85,40 @@
 				8331B35E28C83D5800627214 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8331B36528C83D8D00627214 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8331B35828C83D5700627214 /* ContentView.swift */,
+				8331B36A28C87FA200627214 /* TodoRowEntryView.swift */,
+				8331B37228C9237000627214 /* CardBackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8331B36628C83D9400627214 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8331B35328C83D5700627214 /* PersistenceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8331B36C28C88E0300627214 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8331B36D28C88E1200627214 /* TodoEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		8331B36F28C9186A00627214 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8331B37028C918C200627214 /* DateHelper.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +137,9 @@
 			dependencies = (
 			);
 			name = todo;
+			packageProductDependencies = (
+				8331B36828C83F3100627214 /* SwiftDate */,
+			);
 			productName = todo;
 			productReference = 8331B34E28C83D5700627214 /* todo.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +168,9 @@
 				Base,
 			);
 			mainGroup = 8331B34528C83D5700627214;
+			packageReferences = (
+				8331B36728C83F3100627214 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+			);
 			productRefGroup = 8331B34F28C83D5700627214 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,10 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8331B36E28C88E1200627214 /* TodoEntity.swift in Sources */,
 				8331B35228C83D5700627214 /* todoApp.swift in Sources */,
-				8331B35428C83D5700627214 /* Persistence.swift in Sources */,
+				8331B35428C83D5700627214 /* PersistenceController.swift in Sources */,
+				8331B37328C9237000627214 /* CardBackView.swift in Sources */,
 				8331B35928C83D5700627214 /* ContentView.swift in Sources */,
 				8331B35728C83D5700627214 /* todo.xcdatamodeld in Sources */,
+				8331B37128C918C200627214 /* DateHelper.swift in Sources */,
+				8331B36B28C87FA200627214 /* TodoRowEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8331B36728C83F3100627214 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8331B36828C83F3100627214 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8331B36728C83F3100627214 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8331B35528C83D5700627214 /* todo.xcdatamodeld */ = {
